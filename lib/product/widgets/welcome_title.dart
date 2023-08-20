@@ -27,7 +27,7 @@ class WelcomeTitle extends StatelessWidget {
             ),
           ],
         ),
-        const CircleAvatar(
+        CircleAvatar(
           radius: 30,
         ),
       ],

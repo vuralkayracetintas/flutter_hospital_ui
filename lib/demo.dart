@@ -1,37 +1,52 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hospital_ui/feature/home/homepage.dart';
-import 'package:kartal/kartal.dart';
+import 'package:flutter_hospital_ui/feature/home/home_view.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({super.key});
+/// Flutter code sample for [BottomNavigationBar].
+
+class BottomNavigationBarExample extends StatefulWidget {
+  const BottomNavigationBarExample({super.key});
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<BottomNavigationBarExample> createState() =>
+      _BottomNavigationBarExampleState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _BottomNavigationBarExampleState
+    extends State<BottomNavigationBarExample> {
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    HomeView(),
+    Text(
+      'Index 1: Business',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: School',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: School',
+      style: optionStyle,
+    )
+  ];
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
   }
 
-  int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
-    HomePage(),
-    Text(
-      'Schedule Page',
-    ),
-    Text(
-      'Reports. Page',
-    ),
-    Text(
-      'Notifications Page',
-    )
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('BottomNavigationBar Sample'),
+      ),
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -56,13 +71,6 @@ class _HomeViewState extends State<HomeView> {
         unselectedItemColor: Colors.blue,
         unselectedLabelStyle: TextStyle(color: Colors.blue),
         onTap: _onItemTapped,
-      ),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        toolbarHeight: context.sized.height * 0.01,
-      ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
       ),
     );
   }
