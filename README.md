@@ -6,8 +6,8 @@
 
 <div style="display: flex; justify-content: center;">
   <div style="flex: 1; margin-right: 10px;">
-    <img src="assets/screenshots/home.png" alt="Ana Ekran" width="300" />
-    <img src="assets/screenshots/calendar.png" alt="Ana Ekran" width="300" />
+    <img src="assets/screenShots/home.png" alt="Ana Ekran" width="300" />
+    <img src="assets/screenShots/calendar.png" alt="Ana Ekran" width="300" />
     <p style="text-align: center;">Splash, Home</p>
   </div>
 </div>
