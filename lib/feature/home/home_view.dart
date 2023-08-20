@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hospital_ui/feature/calendar/calendar_view.dart';
 import 'package:flutter_hospital_ui/feature/home/homepage.dart';
 import 'package:kartal/kartal.dart';
 
@@ -19,9 +20,7 @@ class _HomeViewState extends State<HomeView> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    Text(
-      'Schedule Page',
-    ),
+    CalendarView(),
     Text(
       'Reports. Page',
     ),
@@ -39,8 +38,8 @@ class _HomeViewState extends State<HomeView> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Schedule',
+            icon: Icon(Icons.calendar_month),
+            label: 'Calendar',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.report),
