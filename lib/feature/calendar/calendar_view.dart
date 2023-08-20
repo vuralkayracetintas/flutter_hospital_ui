@@ -12,10 +12,24 @@ class CalendarView extends StatelessWidget {
     final DateTime lastDay = DateTime(DateTime.now().year + 5);
 
     return Scaffold(
-      body: Padding(
-        padding: context.padding.low,
-        child: TableCalendar(
-            focusedDay: focusedDate, firstDay: firstDay, lastDay: lastDay),
+      body: Column(
+        children: [
+          Padding(
+            padding: context.padding.low,
+            child: TableCalendar(
+              focusedDay: focusedDate,
+              firstDay: firstDay,
+              lastDay: lastDay,
+            ),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: Size(context.sized.width * 0.8, 50),
+            ),
+            onPressed: () {},
+            child: Text('Create an Appointment'),
+          )
+        ],
       ),
     );
   }
