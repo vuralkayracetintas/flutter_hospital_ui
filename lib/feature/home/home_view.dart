@@ -43,11 +43,11 @@ class _HomeViewState extends State<HomeView> {
             label: 'Schedule',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(Icons.report),
             label: 'Reports',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(Icons.notification_add),
             label: 'Notifications',
           )
         ],

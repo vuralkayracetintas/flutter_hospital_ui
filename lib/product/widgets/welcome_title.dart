@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hospital_ui/product/constants/string_constants.dart';
 import 'package:kartal/kartal.dart';
 
 class WelcomeTitle extends StatelessWidget {
@@ -15,12 +16,12 @@ class WelcomeTitle extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Hello 👋🏻',
+              StringConstants.homeTitle,
               style: context.general.textTheme.headlineSmall,
               textAlign: TextAlign.start,
             ),
             Text(
-              'Welcome to \nFlutter Hospital UI',
+              StringConstants.homeSubtitle,
               style: context.general.textTheme.headlineSmall
                   ?.copyWith(fontWeight: FontWeight.bold),
               maxLines: 2,

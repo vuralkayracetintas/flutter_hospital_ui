@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hospital_ui/product/constants/color_constatns.dart';
+import 'package:flutter_hospital_ui/product/constants/image_constants.dart';
+import 'package:flutter_hospital_ui/product/constants/string_constants.dart';
 import 'package:flutter_hospital_ui/product/widgets/custom_appointmet_container.dart';
 import 'package:flutter_hospital_ui/product/widgets/custom_card.dart';
 import 'package:flutter_hospital_ui/product/widgets/custom_text_field.dart';
@@ -26,7 +29,7 @@ class HomePage extends StatelessWidget {
                   Padding(
                     padding: context.padding.low,
                     child: Text(
-                      'Services',
+                      StringConstants.homeServices,
                       style: context.general.textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
@@ -38,33 +41,33 @@ class HomePage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         CustomCard(
-                          color: Color.fromARGB(255, 98, 218, 245),
+                          color: ColorConstants.doctorCardColorBG,
                           icons: FaIcon(
-                            color: Color.fromARGB(255, 24, 125, 147),
+                            color: ColorConstants.doctorCardColorIC,
                             FontAwesomeIcons.userDoctor,
                             size: 50,
                           ),
                         ),
                         CustomCard(
-                          color: Color.fromARGB(255, 243, 168, 55),
+                          color: ColorConstants.medicalCardColorBG,
                           icons: FaIcon(
-                            color: Color.fromARGB(255, 177, 124, 43),
+                            color: ColorConstants.medicalCardColorIC,
                             FontAwesomeIcons.kitMedical,
                             size: 50,
                           ),
                         ),
                         CustomCard(
-                          color: Color.fromARGB(255, 55, 165, 255),
+                          color: ColorConstants.fileCardColorBG,
                           icons: FaIcon(
-                            color: Color.fromARGB(255, 40, 96, 143),
+                            color: ColorConstants.fileCardColorIC,
                             FontAwesomeIcons.fileMedical,
                             size: 50,
                           ),
                         ),
                         CustomCard(
-                          color: Color.fromARGB(255, 252, 70, 57),
+                          color: ColorConstants.covidCardColorBG,
                           icons: FaIcon(
-                            color: Color.fromARGB(255, 150, 44, 37),
+                            color: ColorConstants.covidCardColorIC,
                             FontAwesomeIcons.virusCovid,
                             size: 50,
                           ),
@@ -79,8 +82,8 @@ class HomePage extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                               gradient: const LinearGradient(colors: [
-                                Color.fromARGB(255, 168, 229, 242),
-                                Color.fromARGB(255, 48, 203, 237),
+                                ColorConstants.lightBlue,
+                                ColorConstants.darkBlue,
                               ]),
                               borderRadius: context.border.normalBorderRadius),
                           height: 200,
@@ -91,13 +94,15 @@ class HomePage extends StatelessWidget {
                               padding: context.padding.normal,
                               child: Column(
                                 children: [
-                                  Text('Get the best \nmedical services',
+                                  Text(StringConstants.homeContainerTitle,
                                       textAlign: TextAlign.start,
                                       style: context
                                           .general.textTheme.headlineMedium
-                                          ?.copyWith(color: Colors.white)),
+                                          ?.copyWith(
+                                              color:
+                                                  ColorConstants.colorWhite)),
                                   const Text(
-                                    'We provide best quality medical \nservice without further cost.',
+                                    StringConstants.homeContainerSubtitle,
                                   )
                                 ],
                               ),
@@ -105,7 +110,8 @@ class HomePage extends StatelessWidget {
                             const Expanded(
                               child: Image(
                                 image: AssetImage(
-                                    'assets/images/doctor_copy-removebg-preview.png'),
+                                  ImageConstans.imageDoctor,
+                                ),
                               ),
                             )
                           ],
@@ -117,7 +123,7 @@ class HomePage extends StatelessWidget {
                     padding: context.padding.onlyTopLow,
                     child: FittedBox(
                       child: Text(
-                        'Upcoming Appointments',
+                        StringConstants.upComming,
                         style: context.general.textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -136,9 +142,8 @@ class HomePage extends StatelessWidget {
                             department: 'Depression',
                             doctor: 'Dr. Mim Akhter',
                             time: '9.30 AM',
-                            containerColor: Color.fromARGB(255, 101, 226, 233),
-                            smallContainerColor:
-                                Color.fromARGB(255, 46, 179, 186),
+                            containerColor: ColorConstants.turquoiseLight,
+                            smallContainerColor: ColorConstants.turquoiseDark,
                           ),
                           CustomAppointmentsContainer(
                               date: '13',
@@ -146,10 +151,8 @@ class HomePage extends StatelessWidget {
                               department: 'Eye Care',
                               doctor: 'Dr. Mim Akhter',
                               time: '10.30 AM',
-                              containerColor:
-                                  Color.fromARGB(255, 175, 218, 108),
-                              smallContainerColor:
-                                  Color.fromARGB(255, 116, 165, 38)),
+                              containerColor: ColorConstants.lightGreen,
+                              smallContainerColor: ColorConstants.darkGreen),
                         ],
                       ))
                 ],
