@@ -4,5 +4,5 @@ import 'package:flutter/material.dart';
 class ImageConstans {
   const ImageConstans._();
 
-  static const im_doctor = 'assets/images/doctor_copy-removebg-preview.png';
+  static const imageDoctor = 'assets/images/doctor_copy-removebg-preview.png';
 }

@@ -12,7 +12,7 @@ class ColorConstants {
   static const Color medicalCardColorBG = Color.fromARGB(255, 243, 168, 55);
   static const Color medicalCardColorIC = Color.fromARGB(255, 177, 124, 43);
   static const Color fileCardColorBG = Color.fromARGB(255, 55, 165, 255);
-  static const Color fileCardColorIC = Color.fromARGB(255, 55, 165, 255);
+  static const Color fileCardColorIC = Color.fromARGB(255, 41, 115, 176);
   static const Color covidCardColorBG = Color.fromARGB(255, 252, 70, 57);
   static const Color covidCardColorIC = Color.fromARGB(255, 150, 44, 37);
   static const Color colorWhite = Color.fromARGB(255, 255, 255, 255);

@@ -97,10 +97,7 @@ class HomePage extends StatelessWidget {
                                   Text(StringConstants.homeContainerTitle,
                                       textAlign: TextAlign.start,
                                       style: context
-                                          .general.textTheme.headlineMedium
-                                          ?.copyWith(
-                                              color:
-                                                  ColorConstants.colorWhite)),
+                                          .general.textTheme.headlineMedium),
                                   const Text(
                                     StringConstants.homeContainerSubtitle,
                                   )
